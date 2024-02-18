@@ -51,6 +51,8 @@ public partial class gui : Node
 		var texture = (Texture2D)GD.Load("res://colors/green.png");
 		if (pixel.Color == ConsoleColor.Red)
 			texture = (Texture2D)GD.Load("res://colors/red.png");
+		if (pixel.Color == ConsoleColor.Blue)
+			texture = (Texture2D)GD.Load("res://colors/blue.png");
 		
 		sprite.Texture = texture;
 

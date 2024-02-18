@@ -14,9 +14,9 @@ public class Snake
 		Movement = Direction.RIGHT;
 	}
 
-	public void Move()
+	public void Move(int score)
 	{
-		Body.Add(new Pixel { X = Head.X, Y = Head.Y, Color = Head.Color });
+		Body.Add(new Pixel { X = Head.X, Y = Head.Y, Color = ConsoleColor.Green });
 		switch (Movement.Value)
 		{
 			case Direction.UP:
@@ -32,5 +32,7 @@ public class Snake
 				Head.X++;
 				break;
 		}
+		if (Body.Count > score)
+			Body.RemoveAt(0);
 	}
 }
