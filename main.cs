@@ -30,7 +30,9 @@ public partial class main : Node2D
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
-	{		
+	{
+		if (gameOver)
+			return;
 		snake.Move(score);
 		
 		g.Clear();
@@ -38,8 +40,17 @@ public partial class main : Node2D
 		g.PrintPixel(snake.Head);
 		g.PrintPixel(berry);
 		
-		if (CheckCollision(snake))
-			GD.Print("Collision");
+		if (CheckBerryPickUp(snake, berry)) {
+			berry = Utils.GetRandomPixel();
+			berry.Color = ConsoleColor.Blue;
+			score++;
+		}
+			
+		
+		if (CheckCollision(snake)) {
+			gameOver = true;
+			g.DisplayGameOverMessage(score, GetNode<Label>("GameOverLabel"));
+		}
 	}
 	
 	public override void _UnhandledInput(InputEvent @event)
@@ -58,7 +69,11 @@ public partial class main : Node2D
 	}
 	}
 	
-			   public bool CheckCollision(Snake snake)
+	private bool CheckBerryPickUp(Snake snake, Pixel berry) {
+		return snake.Head.X == berry.X && snake.Head.Y == berry.Y;
+	}
+	
+			   private bool CheckCollision(Snake snake)
 			{
 				if (snake.Head.X == Constants.GUI_WIDTH - 1 || snake.Head.X == 0 || snake.Head.Y == Constants.GUI_HEIGHT - 1 || snake.Head.Y == 0)
 					return true;

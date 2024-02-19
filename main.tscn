@@ -11,3 +11,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 258.0
+offset_top = 286.0
+offset_right = 298.0
+offset_bottom = 309.0

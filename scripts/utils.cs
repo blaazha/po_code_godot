@@ -9,8 +9,8 @@ public static class Utils
 	{
 		return new Pixel
 		{
-			X = random.Next(0, Constants.GUI_WIDTH),
-			Y = random.Next(0, Constants.GUI_HEIGHT)
+			X = random.Next(1, Constants.GUI_WIDTH),
+			Y = random.Next(1, Constants.GUI_HEIGHT)
 		};
 	}
 }
