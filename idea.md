@@ -1,11 +1,10 @@
 # Summary
 
-School Survivor is simple 2D game where player collects good marks and avoids bad marks.
+School Survivor is a simple 2D game where the player collects good marks and avoids bad marks.
 
 ## Detailed Summary
 
-Goal of this game is to collect A marks which flighs over the air. At same time, the player must keep avoiding F markes moving accross game's screen. When the player hits F mark, the game ends. Highest score representing the number of collected A marks is recorded for each game execution.
-The game tris to prepare future students for situation when collecting F marks may result in study termination. During the game, it is possible that multiple F marks will be spawned in such way that the player won't be able to dodge them in any way - this situation tries to prepare future students for a fact that life is not always fair.
+The goal of this game is to collect A marks that fly through the air. At the same time, the player must avoid F marks moving across the game's screen. When the player hits an F mark, the game ends. The highest score, representing the number of collected A marks, is recorded for each game session. The game tries to prepare future students for situations where collecting F marks may result in the termination of their studies. During the game, it is possible for multiple F marks to spawn in such a way that the player won't be able to dodge them at all - this situation aims to prepare future students for the fact that life is not always fair.
 
 ## Assets
 Assets were taken from:
@@ -18,4 +17,4 @@ https://ansimuz.itch.io/sunny-land-pixel-game-art
 https://pixelfrog-assets.itch.io/pixel-adventure-1
 
 ## Screens
-The game consists of two main screens. First screen is Welcome screen which wait for the user to press space to start the game. The second screen is where the game itself takes place. After collision with F mark, the player is redirected back to welcome screen where he can execute the game again.
+The game consists of two main screens. The first screen is the Welcome screen, which waits for the user to press space to start the game. The second screen is where the game itself takes place. After a collision with an F mark, the player is redirected back to the Welcome screen, where they can start the game again.
